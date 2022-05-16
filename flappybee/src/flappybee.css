@@ -1,0 +1,42 @@
+body {
+    color: antiquewhite;
+    background-color: #808080;
+}
+
+#start, #game-over, #game-win {
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
+    width: 400px;
+}
+
+#start a, #game-over a, #game-win a {
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display:block;
+    width: 200px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+#start a:hover, #game-over a:hover, #game-win a:hover {
+    background-color: antiquewhite;
+    color: #808080;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

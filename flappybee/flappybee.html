@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Delivery Bee | Game</title>
+        <script src="src/flappybee.js"></script>
+        <link rel="stylesheet" type="text/css" href="src/flappybee.css">
+    </head>
+    <body>
+        <div id="start" style="display:block">
+            <h1>Delivery Bee</h1>
+            <img src="img/deliverybee.webp" alt="&ltamrainSpeed&rt">
+            <h3>You are a bee! You are on a mission!</h3>
+            Your task is to deliver the honey you've gathered back to your hive!
+            However, the nature is treacherous and those pesky stalks are everywhere.
+            There are 20 of those stalks you need to dodge to make the delivery. Good luck!
+            <br>
+            <br>
+            <a href="#" onclick="startGame()">Buzz, buzz!</a>
+            <br>
+            <i>Click on the button to start. <br> Use Spacebar, or LMB to boost yourself.</i>
+        </div>
+        <div id="game-over" style="display:none">
+            <h1>You failed! :(</h1>
+            <img src="img/reebee.webp" alt="&ltrBeeRee&rt">
+            <p id="score-text">You dodged X stalks.</p>
+            <br>
+            <a href="#" onclick="startGame()">Try again?</a>
+        </div>
+        <div id="game-win" style="display:none">
+            <h1>You did it, you are the best bee there is! &lt3</h1>
+            <br>
+            <img src="img/happybee.webp" alt="&ltrBeeSmoosh&rt">
+            <br>
+            <a href="#" onclick="startGame()">Another journey?</a>
+        </div>
+        <canvas id="canvas" width="800" height="800" style="display:none"></canvas>
+    </body>
+</html>
