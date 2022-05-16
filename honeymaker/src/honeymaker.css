@@ -3,13 +3,14 @@ body {
     text-align: center;
     color: #8080ff;
     background-color: #404040;
+    margin: auto;
+    width: 70%;
 }
 
 #start, #end {
     text-align: center;
-    align-content: center;
     margin: auto;
-    width: 50%;
+    width: 30%;
     padding: 20px;
 }
 
