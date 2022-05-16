@@ -1,0 +1,36 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #8080ff;
+    background-color: #404040;
+}
+
+#start, #end {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+#start a, #end a {
+    border: 1px solid #8080ff;
+    color: #8080ff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display:block;
+    width: 200px;
+    margin-left: 100px;
+    align-self: center;
+    text-align: center;
+    display: block;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

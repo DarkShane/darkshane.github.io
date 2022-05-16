@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bee Maker | Game</title>
+        <script src="src/honeymaker.js"></script>
+        <link rel="stylesheet" type="text/css" href="src/honeymaker.css">
+    </head>
+    <body>
+        <h1>Honey Maker!</h1>
+        <div id="game" style="display:none">
+            <canvas id="canvas"></canvas>
+            <p>Your score: <a id="score">-</a></p>
+        </div>
+        <div id="start" style="display:block">
+            <h2>Welcome to the Honey Maker!</h2>
+            <img src="img/beeworker.webp">
+            <p>You are a rainbow bee. You fly from flower to flower.
+                <br>You collect the flowers to make honey so the hive has enough food!
+            </p>
+            <br>
+            <a href="#" onclick="startGame()">Let's do this!</a>
+            <p><i>Use WASD or Arrows to control.</i></p>
+        </div>
+        <div id="end" style="display:none">
+            <img src="img/beerip.webp">
+            <p>Oh no! It seems you've had an accident!
+                <br>You've managed to collect <h2 id="final-score">-</h2> jars of honey for the hive.
+            </p>
+            <br>
+            <a href="#" onclick="startGame()">Try again!</a>
+        </div>
+    </body>
+</html>
