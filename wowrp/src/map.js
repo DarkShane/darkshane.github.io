@@ -7,6 +7,8 @@ function setContainer() {
         const canvas = document.getElementById('map-canvas');
         const context = canvas.getContext('2d');
         
+        const dot = document.getElementById('dot-container');
+
         let isDragging = false;
         let startX = 0;
         let startY = 0;
@@ -19,6 +21,30 @@ function setContainer() {
         
         canvas.width = img.width;
         canvas.height = img.height;
+
+        fetch('test.csv')
+            .then(response => response.text())
+            .then(data => {
+                const lines = data.trim().split('\n');
+                const headers = lines[0].split(';');
+                const result = [];
+
+                for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(';');
+                const obj = {};
+
+                for (let j = 0; j < headers.length; j++) {
+                    obj[headers[j]] = values[j];
+                }
+
+                result.push(obj);
+                }
+
+                console.log(result);
+            });
+
+        dot.style.left = 50 + 'px';
+        dot.style.top = 100 + 'px';
 
         drawImage();
 
