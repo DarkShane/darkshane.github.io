@@ -1,0 +1,14 @@
+body {
+    color: #cccccc;
+    background-color: #404040;
+    margin: auto;
+    width: 90%;
+}
+
+.map-container {
+    background-color: #000000;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

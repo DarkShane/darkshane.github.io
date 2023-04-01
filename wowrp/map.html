@@ -3,13 +3,12 @@
     <head>
         <title>Mob Tracker | Test Map</title>
         <script src="src/map.js"></script>
-        <!--link rel="stylesheet" type="text/css" href="src/honeymaker.css"-->
+        <link rel="stylesheet" type="text/css" href="src/map.css">
     </head>
-    <body>
-        <h1>Honey Maker!</h1>
-        <div id="map" style="display:none">
-            <canvas id="canvas"></canvas>
-            <p>Lorem ipsum.</p>
+    <body onload="setContainer()">
+        <h1>Lorem ipsum.</h1>
+        <div id="map-container" class="map-container">
+            <canvas id="map-canvas"></canvas>
         </div>
     </body>
 </html>
