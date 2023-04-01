@@ -4,15 +4,23 @@ function setContainer() {
 
     img.onload = function() {
         const mapContainer = document.getElementById('map-container');
+        const canvas = document.getElementById('map-canvas');
+        const context = canvas.getContext('2d');
+        
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let translateX = 0;
+        let translateY = 0;
+        const scaleFactor = 1.1;
+        
         mapContainer.style.width = `${img.width}px`;
         mapContainer.style.height = `${img.height}px`;
-
-        const canvas = document.getElementById('map-canvas');
+        
         canvas.width = img.width;
         canvas.height = img.height;
 
-        const context = canvas.getContext('2d');
-        context.drawImage(img, 0, 0);
+        drawImage();
 
         canvas.addEventListener('mousedown', startDragging);
         canvas.addEventListener('mouseup', stopDragging);
@@ -20,12 +28,6 @@ function setContainer() {
         canvas.addEventListener('wheel', zoom);
         canvas.addEventListener('dblclick', resetCanvas);
 
-        let isDragging = false;
-        let startX = 0;
-        let startY = 0;
-        let translateX = 0;
-        let translateY = 0;
-        const scaleFactor = 1.1;
         
         function resetCanvas() {
             console.log(`Reseting canvas!`);
@@ -89,6 +91,9 @@ function setContainer() {
 
         function drawImage() {
             context.drawImage(img, 0, 0);
+
+            const centerX = canvas.width / 2 - translateX;
+            const centerY = canvas.height / 2 - translateY;
         }
 
         function translateCanvas(dx, dy) {

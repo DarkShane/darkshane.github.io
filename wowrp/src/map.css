@@ -1,14 +1,44 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
     color: #cccccc;
     background-color: #404040;
     margin: auto;
     width: 90%;
 }
 
+
 .map-container {
     background-color: #000000;
     width: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+}
+
+.dot-container {
+    background-color: rgba(255, 0, 0, 0.2);
     position: relative;
+    display: inline-block;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.tooltip {
+    line-height: 0.1;
+    visibility: hidden;
+    width: 200px;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.dot-container:hover .tooltip {
+    visibility: visible;
 }
